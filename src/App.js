@@ -1,4 +1,8 @@
-import Student from "./components/Student"
+import Student from "./components/Student";
+import PersonIterator from './components/PersonIterator'
+import StudentClass from './components/StudentClass'
+
+import './css/style.css'
 
 // const name = "Mia Koluci"
 // const age = 31
@@ -21,8 +25,19 @@ const student = {
   fruits
 }
   return (<>
-    <div>Hello World</div>
-    <Student name={name} age={age} shouldTheComponentsShow={toShow} />
+    <div style={{fontSize: '10px'}}>Hello World</div>
+    <Student fruits={fruits} name={name} age={age} shouldTheComponentsShow={toShow} />
+
+    <Student fruits={['orange', 'lemon', 'lime']} name={'Svetle'} age={44} shouldTheComponentsShow={true} />
+    <hr />
+
+    <PersonIterator />
+
+    <hr />
+
+    <StudentClass fruits={fruits} name={name} age={age} shouldTheComponentsShow={toShow} />
+
+
     </>);
 }
 
